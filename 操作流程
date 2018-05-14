@@ -1,0 +1,40 @@
+
+ubuntu端
+
+	==启动 listener 节点接收 windows kinect 数据==
+	==把数据发送到13000端口==
+		在 ws 工作空间下
+
+		. devel/setup.bash
+		roscore
+
+		. devel/setup.bash
+		rosrun rosserial_server socket_node
+
+		. devel/setup.bash
+		rosrun skeleton_msg listener.py
+
+
+	==从 ros listener 节点中接收数据(13000端口)==
+	==动作识别==
+	==把命令发送给moveit_demo节点==
+
+		在pycharm中运行 online_test.py 文件
+
+
+
+	==启动 moveit_demo 节点接收命令并把命令传送给baxter==
+		在 ws 工作空间下
+		
+		. baxter.sh
+		rosrun baxter_interface joint_trajectory_action_server.py
+
+		. baxter.sh
+		roslaunch baxter_moveit_config baxter_grippers.launch
+
+		. baxter.sh
+		rosrun dmp right_endpoint_playback_modify.py
+
+windows端
+
+	执行BodyBasics-D2D项目

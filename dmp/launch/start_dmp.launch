@@ -1,0 +1,20 @@
+<launch>
+  
+  <!-- Weight Node -->
+  <node pkg="dmp" 
+  		type="get_weight_server" 
+  		name="get_weight_server" 
+  		output="screen" 
+  		respawn="true">
+  </node>
+
+
+  <!-- Trajectory Node -->
+  <node pkg="dmp" 
+  		type="get_trajectory_server" 
+  		name="get_trajectory_server" 
+  		output="screen" 
+  		respawn="true">
+  </node>
+
+</launch>

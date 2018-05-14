@@ -1,0 +1,10 @@
+rosrun dmp endpoint_recorder.py -f filename    (采集数据)
+还原：
+roslaunch dmp start_all.launch
+rosrun dmp execute_endpoint_data.py -f filename joint_states:=/robot/joint_states
+//roslaunch baxter_gazebo baxter_world.launch
+
+激活机器人
+$ rosrun baxter_tools enable_robot.py -e
+关闭
+$ rosrun baxter_tools enable_robot.py -d

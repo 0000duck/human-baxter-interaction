@@ -1,0 +1,10 @@
+<launch>
+  
+  <!-- Weight Node -->
+  <node pkg="dmp" type="add_two_ints_server.py" name="add_two_ints_server" 
+  		output="screen" respawn="true"  >
+  </node>
+
+
+
+</launch>

@@ -1,0 +1,4 @@
+string readFile
+string writeFile
+---
+string weight
